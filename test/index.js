@@ -102,6 +102,21 @@ var input = [
     "mentions": []
   },
   "signature": "xXJHmKVlhoeEdKMPxJnA0zMmjc8LK6NvnJ8/1/t5gHLEdt5iq7zN88sFP0lcM9DGIbxjVhmcsMKj0LByOYoxDA==.sig.ed25519"
+},
+{
+  "previous": "%kydoLHaXVnQEJKW4yjpl+yS2USPD2IOuAn30RlrgViA=.sha256",
+  "author": "@dnr1swLSAgf36g+FzGjNLgmytj2IIyDaYeKZ7F5GdzY=.ed25519",
+  "sequence": 2362,
+  "timestamp": 1495059596839,
+  "hash": "sha256",
+  "content": {
+    "type": "post",
+    "text": "I have been experimenting with those same modules\nhere's an [alt sbot](ssb://%syzdcFcK6FZMxOKo1P1j6onbfe/LWPTWhbI1z3hDxZ4=.sha256) that uses hyperlogs (run test.js)\nand [a markdown messaging app](ssb://%Gic7UbnOoD7AjyKMHZdpw/9w75ZuPTxuNIrG7Thh8o4=.sha256) that uses swarmlog/signalhub/webrtc - checkout the *hyperlog* branch, see readme\n(the master branch is a possibly-still-working implementation that publishes to sbot)",
+    "root": "%KyiAnXOX9f9AgAJfQGKOOFJ0iCeKqHGJogGAH5HTuSQ=.sha256",
+    "branch": "%KyiAnXOX9f9AgAJfQGKOOFJ0iCeKqHGJogGAH5HTuSQ=.sha256",
+    "channel": "javascript"
+  },
+  "signature": "/vpvHipytGW/O3m9CLW4wcoJPydLVRQOf344jMu2W3mi6OuwgoDfL0Jfm5DRpwTk4yFS/dZa/zi+lLEfXc2rDw==.sig.ed25519"
 }
 
 ]
@@ -112,7 +127,8 @@ var output = [
 '<p><a href="#/profile/%40hxGxqPrplLjRG2vtjQL87abX4QKqeLgCwQpS730nNwE%3D.ed25519">@paul</a> <a href="#/profile/%40ye%2BQM09iPcDJD6YvQYjoQc7sLF%2FIFhmNbEqgdzQo3lQ%3D.ed25519">@mixmix</a> in the latest version there isn&#39;t anyway to see who is on a thread until you see them reply. In previous versions the other recipients where in the reply form, but that is gone now. I can imagine some unfortunate things being said because someone doesn&#39;t realize who else is on that thread.</p>',
 '<p>If somebody&#39;s looking for a UI task to hack on, the <a href="https://github.com/ssbc/patchwork/issues/218" target="_blank">Expand threads in-place</a> is a moderate-sized item that I&#39;d love to get in. I&#39;m going to work on the social and onboarding bits now, so I won&#39;t be able to get to it for a bit.</p>\n<p>There will be <img src="./img/emoji/cake.png" alt=":cake:" title=":cake:" class="emoji" align="absmiddle" height="16" width="16"> and <img src="./img/emoji/cookie.png" alt=":cookie:" title=":cookie:" class="emoji" align="absmiddle" height="16" width="16">s and <img src="./img/emoji/heart.png" alt=":heart:" title=":heart:" class="emoji" align="absmiddle" height="16" width="16">s as a reward</p>',
 '<p>UI experiment: JSX-inspired es6 tagged template string function: <a href="https://github.com/substack/hyperx" target="_blank">hyperx</a>. Inline HTML templates for multiple engines (hyperscript, virtual-dom, react) without a transpiler.</p>\n<p>Here&#39;s the virtual-dom/main-loop example:</p>\n<pre><code class="lang-js">var vdom = require(&#39;virtual-dom&#39;)\nvar hyperx = require(&#39;hyperx&#39;)\nvar hx = hyperx(vdom.h)\n\nvar main = require(&#39;main-loop&#39;)\nvar loop = main({ times: 0 }, render, vdom)\ndocument.querySelector(&#39;#content&#39;).appendChild(loop.target)\n\nfunction render (state) {\n  return hx`&lt;div&gt;\n    &lt;h1&gt;clicked ${state.times} times&lt;/h1&gt;\n    &lt;button onclick=${onclick}&gt;click me!&lt;/button&gt;\n  &lt;/div&gt;`\n\n  function onclick () {\n    loop.update({ times: state.times + 1 })\n  }\n}\n</code></pre>',
-'<p><a href="#/channel/feedback">#feedback</a><br>I&#39;m finding the amount of whitespace in the comments for each post to be a bit frustrating as I have to scroll for ages to get to the next post in my feed and it isn&#39;t visually obvious when the comments stop and the next post starts. Would love to see the padding dropped down on comments. </p>'
+'<p><a href="#/channel/feedback">#feedback</a><br>I&#39;m finding the amount of whitespace in the comments for each post to be a bit frustrating as I have to scroll for ages to get to the next post in my feed and it isn&#39;t visually obvious when the comments stop and the next post starts. Would love to see the padding dropped down on comments. </p>',
+'<p>I have been experimenting with those same modules<br>here&#39;s an <a href="#/msg/%25syzdcFcK6FZMxOKo1P1j6onbfe%2FLWPTWhbI1z3hDxZ4%3D.sha256">alt sbot</a> that uses hyperlogs (run test.js)<br>and <a href="#/msg/%25Gic7UbnOoD7AjyKMHZdpw%2F9w75ZuPTxuNIrG7Thh8o4%3D.sha256">a markdown messaging app</a> that uses swarmlog/signalhub/webrtc - checkout the <em>hyperlog</em> branch, see readme<br>(the master branch is a possibly-still-working implementation that publishes to sbot)</p>\n'
 ]
 
 var outputInline = [
@@ -122,6 +138,7 @@ var outputInline = [
 "If somebody's looking for a UI task to hack on, the Expand threads in-place is a moderate-sized item that I'd love to get in. I'm going to work on the social and onboarding bits now, so I won't be able to get to it for a bit. There will be <img src=\"./img/emoji/cake.png\" alt=\":cake:\" title=\":cake:\" class=\"emoji\" align=\"absmiddle\" height=\"12\" width=\"12\"> and <img src=\"./img/emoji/cookie.png\" alt=\":cookie:\" title=\":cookie:\" class=\"emoji\" align=\"absmiddle\" height=\"12\" width=\"12\">s and <img src=\"./img/emoji/heart.png\" alt=\":heart:\" title=\":heart:\" class=\"emoji\" align=\"absmiddle\" height=\"12\" width=\"12\">s as a reward ",
 "UI experiment: JSX-inspired es6 tagged template string function: hyperx. Inline HTML templates for multiple engines (hyperscript, virtual-dom, react) without a transpiler. Here's the virtual-dom/main-loop example: var vdom = require('virtual-dom') var hyperx = require('hyperx') var hx = hyperx(vdom.h) var main = require('main-loop') var loop = main({ times: 0 }, render, vdom) document.querySelector('#content').appendChild(loop.target) function render (state) {   return hx`&lt;div&gt;     &lt;h1&gt;clicked ${state.times} times&lt;/h1&gt;     &lt;button onclick=${onclick}&gt;click me!&lt;/button&gt;   &lt;/div&gt;`   function onclick () {     loop.update({ times: state.times + 1 })   } } ",
 "#feedback I'm finding the amount of whitespace in the comments for each post to be a bit frustrating as I have to scroll for ages to get to the next post in my feed and it isn't visually obvious when the comments stop and the next post starts. Would love to see the padding dropped down on comments. ",
+'I have been experimenting with those same modules here\'s an alt sbot that uses hyperlogs (run test.js) and a markdown messaging app that uses swarmlog/signalhub/webrtc - checkout the hyperlog branch, see readme (the master branch is a possibly-still-working implementation that publishes to sbot) ',
 ]
 
 
@@ -133,7 +150,8 @@ var tests = [
   'message with "@" mentions',
   'message with emoji',
   'message with inline html in code block',
-  'message with hashtag'
+  'message with hashtag',
+  'message with link with ssb:// protocol'
 ]
 
 var tape = require('tape')
